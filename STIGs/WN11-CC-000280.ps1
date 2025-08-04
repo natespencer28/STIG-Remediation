@@ -26,3 +26,19 @@
 #>
 
 # YOUR CODE GOES HERE
+
+# Define the registry path and value details
+$registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services"
+$valueName = "fPromptForPassword"
+$valueData = 1
+
+# Check if the registry path exists; if not, create it
+if (-not (Test-Path $registryPath)) {
+    New-Item -Path $registryPath -Force | Out-Null
+}
+
+# Set the registry value
+New-ItemProperty -Path $registryPath -Name $valueName -Value $valueData -PropertyType DWord -Force
+
+# Output confirmation
+Write-Output "Registry value '$valueName' set to '$valueData' at '$registryPath'."
