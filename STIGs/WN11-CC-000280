@@ -6,7 +6,7 @@ If the following registry value does not exist or is not configured as specified
 Registry Hive: HKEY_LOCAL_MACHINE
 Registry Path: \SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\
 
-Value Name: fPromptForPassword
+*******Value Name: fPromptForPassword.ps1******
 
 Value Type: REG_DWORD
 Value: 1
