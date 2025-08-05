@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    This PowerShell script controls the ability of users to supply passwords automatically as part of their remote desktop connection
+    This PowerShell script ensures Remote Desktop Services must be configured with the client connection encryption level set to “High
 
 .NOTES
     Author          : Nate Spencer
