@@ -6,12 +6,12 @@
     Author          : Nate Spencer
     LinkedIn        : 
     GitHub          : https://www.linkedin.com/in/nathaniel-spencer-133903153/
-    Date Created    : 2025-08-03
-    Last Modified   : 2024-08-03
+    Date Created    : 2025-08-04
+    Last Modified   : 2024-08-04
     Version         : 1.0
     CVEs            : N/A
     Plugin IDs      : N/A
-    STIG-ID         : WN11-CC-000280
+    STIG-ID         : WN11-CC-000290
 
 .TESTED ON
     Date(s) Tested  : 
