@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    This PowerShell script controls the Force audit policy subcategory settings to override audit policy category settings" must be set to "Enabled"
+    This PowerShell script controls the "Process even if the Group Policy objects have not changed" option ensures that the policies will be reprocessed even if none have been changed.
 
 .NOTES
     Author          : Nate Spencer
