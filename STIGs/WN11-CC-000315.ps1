@@ -23,6 +23,9 @@
 
 # YOUR CODE GOES HERE
 
+# Temporarily set the execution policy to Bypass for the current session
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+
 # Define the registry path
 $registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Installer"
 
@@ -38,5 +41,3 @@ if (-not (Test-Path -Path $registryPath)) {
 # Set the registry value AlwaysInstallElevated to 0 (REG_DWORD)
 New-ItemProperty -Path $registryPath -Name "AlwaysInstallElevated" -Value 0 -PropertyType DWORD -Force
 Write-Output "Set 'AlwaysInstallElevated' to 0 (REG_DWORD)"
-
-
