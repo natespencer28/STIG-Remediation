@@ -23,21 +23,25 @@
 
 # YOUR CODE GOES HERE 
 
-# Temporarily set the execution policy to Bypass for the current session
+# Temporarily bypass execution policy for this session
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
 
-# Define the registry path
-$registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Installer"
+# Define the registry path and value
+$regHive = "HKLM:"
+$regPath = "Software\Policies\Microsoft\Windows\Installer"
+$fullPath = Join-Path -Path $regHive -ChildPath $regPath
 
-# Check if the registry path exists
-if (-not (Test-Path -Path $registryPath)) {
-    # If the path doesn't exist, create it
-    New-Item -Path $registryPath -Force
-    Write-Output "Registry path created: $registryPath"
+# Create the registry path if it doesn't exist
+if (-not (Test-Path -Path $fullPath)) {
+    New-Item -Path $fullPath -Force | Out-Null
+    Write-Output "Created registry path: $fullPath"
 } else {
-    Write-Output "Registry path already exists: $registryPath"
+    Write-Output "Registry path already exists: $fullPath"
 }
 
-# Set the registry value AlwaysInstallElevated to 0 (REG_DWORD)
-New-ItemProperty -Path $registryPath -Name "AlwaysInstallElevated" -Value 0 -PropertyType DWORD -Force
-Write-Output "Set 'AlwaysInstallElevated' to 0 (REG_DWORD)"
+# Set the policy value to 0 (Disabled)
+New-ItemProperty -Path $fullPath -Name "AlwaysInstallElevated" -PropertyType DWORD -Value 0 -Force | Out-Null
+Write-Output "Set 'AlwaysInstallElevated' to 0 (Disabled) in Local Group Policy via registry"
+
+# Optional: Force Group Policy to refresh
+# gpupdate /force
