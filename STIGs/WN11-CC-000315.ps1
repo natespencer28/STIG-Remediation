@@ -23,18 +23,20 @@
 
 # YOUR CODE GOES HERE
 
-# Define registry path
+# Define the registry path
 $registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Installer"
 
-# Create the registry key if it doesn't exist
+# Check if the registry path exists
 if (-not (Test-Path -Path $registryPath)) {
+    # If the path doesn't exist, create it
     New-Item -Path $registryPath -Force
-    Write-Output "Created registry key: $registryPath"
+    Write-Output "Registry path created: $registryPath"
 } else {
-    Write-Output "Registry key already exists: $registryPath"
+    Write-Output "Registry path already exists: $registryPath"
 }
 
-# Set the DWORD value
+# Set the registry value AlwaysInstallElevated to 0 (REG_DWORD)
 New-ItemProperty -Path $registryPath -Name "AlwaysInstallElevated" -Value 0 -PropertyType DWORD -Force
-Write-Output "Set AlwaysInstallElevated to 0 (REG_DWORD)"
+Write-Output "Set 'AlwaysInstallElevated' to 0 (REG_DWORD)"
+
 
