@@ -1,1 +1,3 @@
-Set-ExecutionPolicy -ExecutionPolicy Bypass -Command Invoke-WebRequest -Uri "https://raw.githubusercontent.com/natespencer28/STIG-Remediation/refs/heads/main/STIGs/WN11-CC-000315.ps1" -OutFile "C:\ProgramData\STIGS\WN11-CC-000315.ps1"
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+$scriptUrl = "https://raw.githubusercontent.com/natespencer28/STIG-Remediation/refs/heads/main/STIGs/WN11-CC-000315.ps1"
+Invoke-RestMethod -Uri $scriptUrl | Invoke-Expression
