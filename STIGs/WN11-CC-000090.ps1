@@ -5,7 +5,7 @@
 .NOTES
     Author          : Nate Spencer
     LinkedIn        : https://www.linkedin.com/in/nathaniel-spencer-133903153/
-    GitHub          : 
+    GitHub          : https://github.com/natespencer28
     Date Created    : 2025-08-06
     Last Modified   : 2024-08-06
     Version         : 1.0
