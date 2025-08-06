@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    This PowerShell script controls the Force audit policy subcategory settings to override audit policy category settings" must be set to "Enabled"
+    This PowerShell script controls Microsoft consumer experiences suggestions and notifications to users, which may include the installation of Windows Store apps
 
 .NOTES
     Author          : Nate Spencer
