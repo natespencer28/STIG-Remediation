@@ -13,3 +13,4 @@ I want this to serve as a insight to the process I am taking as I am remediating
 5) Utilize ChatGPT to create powershell script to remediate
 6) Document script and STIG in STIG folder above
 7) Use Invoke-webrequest on VM to simulate remote remediation process
+8) Rescan host to ensure the STIG ID shows as "PASSED"
