@@ -1,6 +1,27 @@
+<#
+.SYNOPSIS
+    This PowerShell script prevents the client computer from printing over HTTP, which allows the computer to print to printers on the intranet as well as the internet
 
+.NOTES
+    Author          : Nate Spencer
+    LinkedIn        : https://www.linkedin.com/in/nathaniel-spencer-133903153/
+    GitHub          : https://github.com/natespencer28 
+    Date Created    : 2025-08-06
+    Last Modified   : 2024-08-06
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN11-CC-000110.ps1
 
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
 
+#>
+
+# YOUR CODE GOES HERE
 
 # Define registry path and value
 $regPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Printers"
