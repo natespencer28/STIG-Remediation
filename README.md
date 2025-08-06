@@ -1,1 +1,3 @@
-TEST
+***STIG Remediation Activity
+
+This section is dedicated to the STIG remediations I preformed on a virutal machine hosted in Azure. The STIG folder shows the number of remediations that I have preformed on said VM along with the powershell script that was used.
